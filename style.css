@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Bungee+Shade&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Karla:ital,wght@0,200..800;1,200..800&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+:root {
+  --Desaturated-Red: hsl(0, 36%, 70%);
+  --Soft-Red: hsl(0, 93%, 68%);
+  --Dark-Grayish-Red: hsl(0, 6%, 24%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Josefin Sans", sans-serif;
+  background: linear-gradient(150deg, #ffffff 0%, #fff4f4 84.51%);
+  height: 100vh;
+  width: 100%;
+}
+.container {
+  max-width: 500px;
+  margin: 60px 140px;
+}
+.header {
+  margin-bottom: 100px;
+}
+span {
+  color: var(--Desaturated-Red);
+  font-weight: 300;
+}
+.heading {
+  font-size: 4.5rem;
+  letter-spacing: 15px;
+  font-weight: 500;
+  color: var(--Dark-Grayish-Red);
+}
+.image .desktop {
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+.image .mobile {
+  display: none;
+}
+.para {
+  margin-top: 30px;
+  color: var(--Desaturated-Red);
+  word-spacing: 5px;
+  max-width: 400px;
+  line-height: 20px;
+}
+.form {
+  margin-top: 2.5rem;
+  height: 3rem;
+  position: relative;
+}
+input {
+  border: 1px solid var(--Desaturated-Red);
+  border-radius: 2rem;
+  color: var(--Desaturated-Red);
+  padding: 0.2rem 1.5rem;
+  height: 100%;
+  width: 100%;
+}
+.form button {
+  background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  border: 0;
+  border-radius: 2rem;
+  position: absolute;
+  height: 100%;
+  width: 5rem;
+  top: 0px;
+  right: 0px;
+  cursor: pointer;
+}
+input::placeholder {
+  color: var(--Desaturated-Red);
+}
+input:focus {
+  box-shadow: 0 5px 20px 5px hsl(0, 80%, 86%);
+}
+.icon_error {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 5.8rem;
+  display: none;
+}
+.emailError {
+  color: var(--Soft-Red);
+  margin: 0;
+  margin-top: 0.5rem !important;
+  margin-left: 1rem;
+  text-align: left;
+}
+@media screen and (max-width: 1248px) {
+  body {
+    display: flex;
+    justify-content: center;
+  }
+  .image .desktop {
+    display: none;
+  }
+  .image .mobile {
+    display: block;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 536px) {
+  body {
+    margin-left: 50px;
+  }
+  .para {
+    font-size: 14px;
+  }
+}
